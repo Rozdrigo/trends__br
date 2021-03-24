@@ -12,7 +12,7 @@ module.exports = async function (inf, tam) {
           .then(function (image) {
               image.clone().resize(1080, 1080).blur(80)
                 .composite(background, 0, 0)
-                .composite(image.resize(200, 200), 83, 138)
+                .composite(image.resize(200, 200).blur(2), 83, 138)
                 .print(font1, 313, 128, a.source)
                 .print(font1, 313, 190, 'ACESSOS:')
                 .print(font1, 313, 222, a.searches)

@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const iPhone = puppeteer.devices['iPhone X'];
+var response = [];
 
 if(process.env.NODE_ENV != 'production'){
   require('dotenv').config({ path:  '.env' });
@@ -8,7 +9,6 @@ if(process.env.NODE_ENV != 'production'){
 module.exports = async function posting(inf) {
   const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   const page = await browser.newPage()
-  var response = [];
   await page.emulate(iPhone);
   await page.goto('https://www.instagram.com', { waitUntil: 'load' });
   await page.waitForSelector('button[type="button"]')
