@@ -10,7 +10,7 @@ module.exports = async function (inf, tam) {
       if (b < tam) {
         await Jimp.read(a.image || './assets/templates/none.png')
           .then(function (image) {
-              image.clone().resize(1080, 1080).blur(80)
+              image.clone().resize(1080, 1080).blur(20)
                 .composite(background, 0, 0)
                 .composite(image.resize(200, 200).blur(2), 83, 138)
                 .print(font1, 313, 128, a.source)
