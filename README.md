@@ -1,3 +1,5 @@
+![Group 13](https://user-images.githubusercontent.com/60229463/233132252-87c78b9e-799b-4149-bc11-7adb82e7022d.png)
+
 # 🤖 NODE.JS - INSTAGRAM BOT
 
 START: 
